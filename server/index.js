@@ -1,19 +1,30 @@
-const express = require("express");
-const { createPageRender } = require("vite-plugin-ssr");
+import path from 'path';
+import { fileURLToPath } from 'url';
+import express from 'express';
+import vite from 'vite';
+import { createPageRender } from 'vite-plugin-ssr';
+
+import dothething from './dothething.module.js';
+console.log('');
+console.log('      /* -------------------------------------------------------------------------------- *\\');
+console.log(`==== { ${ dothething() }`);
+console.log('      \\* -------------------------------------------------------------------------------- */');
+console.log('');
 
 const isProduction = process.env.NODE_ENV === "production";
-const root = `${__dirname}/..`;
 
 startServer();
 
 async function startServer() {
+  const __dirname = path.dirname(fileURLToPath(import.meta.url));
+  const root = `${__dirname}/..`;
+
   const app = express();
 
   let viteDevServer;
   if (isProduction) {
     app.use(express.static(`${root}/dist/client`, { index: false }));
   } else {
-    const vite = require("vite");
     viteDevServer = await vite.createServer({
       root,
       server: { middlewareMode: true },

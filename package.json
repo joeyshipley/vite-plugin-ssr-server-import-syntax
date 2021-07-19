@@ -1,4 +1,8 @@
 {
+  "engines": {
+    "node": "16.x"
+  },
+  "type": "module",
   "scripts": {
     "dev": "npm run server",
     "prod": "npm run build && npm run server:prod",
