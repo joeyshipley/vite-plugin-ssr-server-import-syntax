@@ -1,6 +1,9 @@
 # vite-plugin-ssr-server-import-syntax
 
-Attempting to use import blah from 'the-blah-thing'; syntax.
+Attempting to use import syntax:
+```
+import blah from 'the-blah-thing';
+```
 
 ##### Working
 ```
