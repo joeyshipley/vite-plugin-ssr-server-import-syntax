@@ -2,7 +2,7 @@
 
 ###
 
-Built from (Vite-Plugin-SSR)[https://github.com/brillout/vite-plugin-ssr]
+Built from https://github.com/brillout/vite-plugin-ssr
 ```
 > npm init vite-plugin-ssr@latest
 ```
