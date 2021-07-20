@@ -1,5 +1,10 @@
 # vite-plugin-ssr-server-import-syntax
 
+### Fixed in 0.2.2
+https://github.com/brillout/vite-plugin-ssr/issues/118
+
+### Goal
+
 Attempting to use import syntax:
 ```
 import blah from 'the-blah-thing';
